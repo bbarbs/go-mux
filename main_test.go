@@ -15,9 +15,7 @@ import (
 var app App
 
 func TestMain(m *testing.M) {
-
-	app.Initialize()
-
+	app.InitializeDBConnection()
 	ensureTableExists()
 	code := m.Run()
 	clearTable()
